@@ -429,7 +429,8 @@
                     "isHero": true,
                     "isLarge": false,
                     "Skills": [
-                        "Blessed Sight"
+                        "Blessed Sight",
+                        "No Armour"
                     ],
                     "SkillLists": [
                         "Academic",
