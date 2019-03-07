@@ -25,7 +25,6 @@
                     },
                     "Price": 65,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Leader"
@@ -63,7 +62,6 @@
                     },
                     "Price": 45,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Magic User"
@@ -102,7 +100,6 @@
                     },
                     "Price": 80,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Drunken",
@@ -142,7 +139,6 @@
                     },
                     "Price": 45,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [],
                     "SkillLists": [
@@ -177,7 +173,6 @@
                     },
                     "Price": 25,
                     "isHero": false,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Lowest of the Low"
@@ -210,7 +205,6 @@
                     },
                     "Price": 35,
                     "isHero": false,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [],
                     "SkillLists": [],
@@ -241,7 +235,6 @@
                     },
                     "Price": 15,
                     "isHero": false,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Animal"
@@ -272,7 +265,6 @@
                     },
                     "Price": 200,
                     "isHero": false,
-                    "isHiredSword": false,
                     "isLarge": true,
                     "Skills": [
                         "Fear",
@@ -358,7 +350,6 @@
                     },
                     "Price": 70,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Leader",
@@ -400,7 +391,6 @@
                     },
                     "Price": 35,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [],
                     "SkillLists": [
@@ -437,7 +427,6 @@
                     },
                     "Price": 25,
                     "isHero": true,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [
                         "Blessed Sight"
@@ -475,7 +464,6 @@
                     },
                     "Price": 15,
                     "isHero": false,
-                    "isHiredSword": false,
                     "isLarge": false,
                     "Skills": [],
                     "SkillLists": [],
@@ -506,7 +494,6 @@
                     },
                     "Price": 25,
                     "isHero": false,
-                    "isHiredSword": false,
                     "Skills": [],
                     "SkillLists": [],
                     "Spells": [],
