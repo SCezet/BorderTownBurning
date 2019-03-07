@@ -2,6 +2,7 @@
     "armies": [
         {
             "name": "Beastmen",
+            "startingCapital": 500,
             "sizeLimit": 15,
             "alignments": [
                 "Chaotic"
@@ -175,8 +176,8 @@
                     "isHero": false,
                     "isLarge": false,
                     "Skills": [
-                        "Lowest of the Low", 
-                        "Infighting" 
+                        "Lowest of the Low",
+                        "Infighting"
                     ],
                     "SkillLists": [],
                     "Spells": [],
@@ -208,7 +209,7 @@
                     "isHero": false,
                     "isLarge": false,
                     "Skills": [
-                        "Infighting" 
+                        "Infighting"
                     ],
                     "SkillLists": [],
                     "Spells": [],
@@ -288,69 +289,79 @@
                     "equipment": []
                 }
             ],
-			"allowedEquipment": [
-				"BeastBaseEquipment": [
-						{
-							name: "Dagger",
-							cost: 2,
-						},
-						{
-							name: "Club",
-							cost: 3
-						},
-												{
-							name: "Hammer",
-							cost: 5
-						},
-												{
-							name: "Mace",
-							cost: 5
-						},
-												{
-							name: "Axe",
-							cost: 5
-						},
-												{
-							name: "Shield",
-							cost: 5,
-						}
-				],
-				"UngorEquipment": [
-																								{
-							name: "Spear",
-							cost: 5,
-						},
-				],
-				"BeastmenEquipment": [
-																		{
-							name: "Halberd",
-							cost: 15
-						},
-												{
-							name: "Sword",
-							cost: 10
-						},
-						{
-							name: "Double-handed Weapon",
-							cost: 15
-						},
-												{
-							name: "Light Armour",
-							cost: 20
-						},
-																		{
-							name: "Heavy Armour",
-							cost: 50
-						},
-																		{
-							name: "Helmet",
-							cost: 10
-						},
-				],
-			]
+            "allowedEquipment": [
+                {
+                    "name": "BeastBaseEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Dagger",
+                            "cost": 2
+                        },
+                        {
+                            "name": "Club",
+                            "cost": 3
+                        },
+                        {
+                            "name": "Hammer",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Mace",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Axe",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Shield",
+                            "cost": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "UngorEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Spear",
+                            "cost": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "BeastmenEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Halberd",
+                            "cost": 15
+                        },
+                        {
+                            "name": "Sword",
+                            "cost": 10
+                        },
+                        {
+                            "name": "Double-handed Weapon",
+                            "cost": 15
+                        },
+                        {
+                            "name": "Light Armour",
+                            "cost": 20
+                        },
+                        {
+                            "name": "Heavy Armour",
+                            "cost": 50
+                        },
+                        {
+                            "name": "Helmet",
+                            "cost": 10
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "Dwarven Rangers",
+            "startingCapital": 500,
             "sizeLimit": 15,
             "alignments": [
                 "Lawful/Neutral",
@@ -364,6 +375,7 @@
         },
         {
             "name": "Orcs & Goblins",
+            "startingCapital": 500,
             "sizeLimit": 20,
             "alignments": [
                 "Neutral/Chaotic",
@@ -376,6 +388,7 @@
         },
         {
             "name": "Pit Fighters",
+            "startingCapital": 500,
             "sizeLimit": 15,
             "alignments": [
                 "Lawful/Neutral",
@@ -389,6 +402,7 @@
         },
         {
             "name": "Sisters of Sigmar",
+            "startingCapital": 500,
             "sizeLimit": 15,
             "alignments": [
                 "Lawful"
@@ -429,7 +443,11 @@
                     "SpellLists": [
                         "Prayers of Sigmar"
                     ],
-                    "allowedEquipment": ["SigmarEquipment", "SigmarArmour", "SigmarHeroEquipment"],
+                    "allowedEquipment": [
+                        "SigmarEquipment",
+                        "SigmarArmour",
+                        "SigmarHeroEquipment"
+                    ],
                     "include": [
                         1,
                         1
@@ -465,7 +483,11 @@
                     ],
                     "Spells": [],
                     "SpellLists": [],
-                    "allowedEquipment": ["SigmarEquipment", "SigmarArmour", "SigmarHeroEquipment"],
+                    "allowedEquipment": [
+                        "SigmarEquipment",
+                        "SigmarArmour",
+                        "SigmarHeroEquipment"
+                    ],
                     "include": [
                         0,
                         3
@@ -503,7 +525,10 @@
                     ],
                     "Spells": [],
                     "SpellLists": [],
-                    "allowedEquipment": ["SigmarEquipment", "SigmarHeroEquipment"],
+                    "allowedEquipment": [
+                        "SigmarEquipment",
+                        "SigmarHeroEquipment"
+                    ],
                     "include": [
                         0,
                         1
@@ -533,7 +558,10 @@
                     "SkillLists": [],
                     "Spells": [],
                     "SpellLists": [],
-                    "allowedEquipment": ["SigmarEquipment", "SigmarArmour"],
+                    "allowedEquipment": [
+                        "SigmarEquipment",
+                        "SigmarArmour"
+                    ],
                     "include": [
                         0,
                         10
@@ -562,7 +590,10 @@
                     "SkillLists": [],
                     "Spells": [],
                     "SpellLists": [],
-                    "allowedEquipment": ["SigmarEquipment", "SigmarArmour"],
+                    "allowedEquipment": [
+                        "SigmarEquipment",
+                        "SigmarArmour"
+                    ],
                     "include": [
                         0,
                         100
@@ -573,86 +604,95 @@
                     ]
                 }
             ],
-			"allowedEquipment": [
-				"SigmarEquipment": [
-						{
-							name: "Dagger",
-							cost: 2,
-						},
-						{
-							name: "Club",
-							cost: 3
-						},
-												{
-							name: "Staff",
-							cost: 3
-						},
-												{
-							name: "Hammer",
-							cost: 5
-						},
-												{
-							name: "Mace",
-							cost: 5
-						},
-												{
-							name: "Steel Whip",
-							cost: 10
-						},
-																		{
-							name: "Flail",
-							cost: 15
-						},
-												{
-							name: "Sigmarite Warhammer",
-							cost: 15
-						},
-						{
-							name: "Double-handed Weapon",
-							cost: 15
-						},
-												{
-							name: "Sling",
-							cost: 2,
-						}
-				],
-				"SigmarArmour": [
-																		{
-							name: "Light Armour",
-							cost: 20,
-						},
-																								{
-							name: "Heavy Armour",
-							cost: 50,
-						},
-																								{
-							name: "Shield",
-							cost: 5,
-						},
-																								{
-							name: "Buckler",
-							cost: 5,
-						},
-																								{
-							name: "Helmet",
-							cost: 10,
-						}
-				],
-				"SigmarHeroEquipment": [
-																														{
-							name: "Holy Tome",
-							cost: 120,
-						},
-																								{
-							name: "Blessed Water",
-							cost: 10,
-						},
-																								{
-							name: "Holy Relic",
-							cost: 15,
-						}
-				],
-			]
+            "allowedEquipment": [
+                {
+                    "name": "SigmarEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Dagger",
+                            "cost": 2
+                        },
+                        {
+                            "name": "Club",
+                            "cost": 3
+                        },
+                        {
+                            "name": "Staff",
+                            "cost": 3
+                        },
+                        {
+                            "name": "Hammer",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Mace",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Steel Whip",
+                            "cost": 10
+                        },
+                        {
+                            "name": "Flail",
+                            "cost": 15
+                        },
+                        {
+                            "name": "Sigmarite Warhammer",
+                            "cost": 15
+                        },
+                        {
+                            "name": "Double-handed Weapon",
+                            "cost": 15
+                        },
+                        {
+                            "name": "Sling",
+                            "cost": 2
+                        }
+                    ]
+                },
+                {
+                    "name": "SigmarArmour",
+                    "equipmentList": [
+                        {
+                            "name": "Light Armour",
+                            "cost": 20
+                        },
+                        {
+                            "name": "Heavy Armour",
+                            "cost": 50
+                        },
+                        {
+                            "name": "Shield",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Buckler",
+                            "cost": 5
+                        },
+                        {
+                            "name": "Helmet",
+                            "cost": 10
+                        }
+                    ]
+                },
+                {
+                    "name": "SigmarHeroEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Holy Tome",
+                            "cost": 120
+                        },
+                        {
+                            "name": "Blessed Water",
+                            "cost": 10
+                        },
+                        {
+                            "name": "Holy Relic",
+                            "cost": 15
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
