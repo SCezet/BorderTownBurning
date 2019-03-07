@@ -175,7 +175,8 @@
                     "isHero": false,
                     "isLarge": false,
                     "Skills": [
-                        "Lowest of the Low"
+                        "Lowest of the Low", 
+                        "Infighting" 
                     ],
                     "SkillLists": [],
                     "Spells": [],
@@ -206,7 +207,9 @@
                     "Price": 35,
                     "isHero": false,
                     "isLarge": false,
-                    "Skills": [],
+                    "Skills": [
+                        "Infighting" 
+                    ],
                     "SkillLists": [],
                     "Spells": [],
                     "SpellLists": [],
