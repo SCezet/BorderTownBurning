@@ -1,0 +1,527 @@
+{
+    "armies": [
+        {
+            "name": "Beastmen",
+            "sizeLimit": 15,
+            "alignments": [
+                "Chaotic"
+            ],
+            "objectives": [
+                "The Scion of Chaos"
+            ],
+            "units": [
+                {
+                    "name": "Beastmen Chief",
+                    "Characteristics": {
+                        "Movement": 5,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 4,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 4,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 65,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Leader"
+                    ],
+                    "SkillLists": [
+                        "Strength",
+                        "Combat",
+                        "Speed",
+                        "Beastmen"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "BeastmenEquipment",
+                    "include": [
+                        1,
+                        1
+                    ],
+                    "experience": 20,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Beastmen Shaman",
+                    "Characteristics": {
+                        "Movement": 5,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 3,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 6
+                    },
+                    "Price": 45,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Pray User"
+                    ],
+                    "SkillLists": [
+                        "Combat",
+                        "Speed",
+                        "Beastmen"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [
+                        "Chaos Rituals"
+                    ],
+                    "allowedEquipment": "BeastmenEquipment",
+                    "include": [
+                        0,
+                        1
+                    ],
+                    "experience": 11,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Centigor",
+                    "Characteristics": {
+                        "Movement": 8,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 4,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 2,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 80,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Drunken",
+                        "Woodland Dwelling",
+                        "Trample",
+                        "Quadruped"
+                    ],
+                    "SkillLists": [
+                        "Combat",
+                        "Strength",
+                        "Beastmen"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "UngorEquipment",
+                    "include": [
+                        0,
+                        1
+                    ],
+                    "experience": 8,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Bestigor",
+                    "Characteristics": {
+                        "Movement": 5,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 4,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 45,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [],
+                    "SkillLists": [
+                        "Combat",
+                        "Strength",
+                        "Beastmen"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "BeastmenEquipment",
+                    "include": [
+                        0,
+                        2
+                    ],
+                    "experience": 8,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Ungor",
+                    "Characteristics": {
+                        "Movement": 5,
+                        "WeaponSkill": 3,
+                        "BallisticSkill": 3,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 6
+                    },
+                    "Price": 25,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Lowest of the Low"
+                    ],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "UngorEquipment",
+                    "include": [
+                        0,
+                        100
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Gor",
+                    "Characteristics": {
+                        "Movement": 5,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 3,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 6
+                    },
+                    "Price": 35,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "BeastmenEquipment",
+                    "include": [
+                        0,
+                        5
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Warhounds of Chaos",
+                    "Characteristics": {
+                        "Movement": 7,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 0,
+                        "Strength": 4,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 5
+                    },
+                    "Price": 15,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Animal"
+                    ],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "",
+                    "include": [
+                        0,
+                        5
+                    ],
+                    "experience": 0,
+                    "equipment": []
+                },
+                {
+                    "name": "Minotaur",
+                    "Characteristics": {
+                        "Movement": 6,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 4,
+                        "Toughness": 4,
+                        "Wounds": 3,
+                        "Initiative": 4,
+                        "Attacks": 3,
+                        "Leadership": 8
+                    },
+                    "Price": 200,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "isLarge": true,
+                    "Skills": [
+                        "Fear",
+                        "Bloodgreed",
+                        "Bestial",
+                        "Large",
+                        "Tough"
+                    ],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "BeastmenEquipment",
+                    "include": [
+                        0,
+                        1
+                    ],
+                    "experience": 0,
+                    "equipment": []
+                }
+            ]
+        },
+        {
+            "name": "Dwarven Rangers",
+            "sizeLimit": 15,
+            "alignments": [
+                "Lawful/Neutral",
+                "Neutral"
+            ],
+            "objectives": [
+                "The Celestial Protectorate",
+                "The Lure of Fortune"
+            ],
+            "units": []
+        },
+        {
+            "name": "Orcs & Goblins",
+            "sizeLimit": 20,
+            "alignments": [
+                "Neutral/Chaotic",
+                "Chaotic"
+            ],
+            "objectives": [
+                "The Scourge of the Realm"
+            ],
+            "units": []
+        },
+        {
+            "name": "Pit Fighters",
+            "sizeLimit": 15,
+            "alignments": [
+                "Lawful/Neutral",
+                "Neutral",
+                "Neutral/Chaotic"
+            ],
+            "objectives": [
+                "The Celestial Protectorate"
+            ],
+            "units": []
+        },
+        {
+            "name": "Sisters of Sigmar",
+            "sizeLimit": 15,
+            "alignments": [
+                "Lawful"
+            ],
+            "objectives": [
+                "The Celestial Protectorate",
+                "The Damned Shall Burn"
+            ],
+            "units": [
+                {
+                    "name": "Sigmarite Matriarch",
+                    "Characteristics": {
+                        "Movement": 4,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 4,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 4,
+                        "Attacks": 1,
+                        "Leadership": 8
+                    },
+                    "Price": 70,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Leader",
+                        "Pray User"
+                    ],
+                    "SkillLists": [
+                        "Academic",
+                        "Strength",
+                        "Combat",
+                        "Speed",
+                        "Sigmar"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [
+                        "Prayers of Sigmar"
+                    ],
+                    "allowedEquipment": "SigmarEquipment",
+                    "include": [
+                        1,
+                        1
+                    ],
+                    "experience": 20,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Sister Superior",
+                    "Characteristics": {
+                        "Movement": 4,
+                        "WeaponSkill": 4,
+                        "BallisticSkill": 3,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 35,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [],
+                    "SkillLists": [
+                        "Academic",
+                        "Strength",
+                        "Combat",
+                        "Speed",
+                        "Sigmar"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "SigmarEquipment",
+                    "include": [
+                        0,
+                        3
+                    ],
+                    "experience": 8,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Augur",
+                    "Characteristics": {
+                        "Movement": 4,
+                        "WeaponSkill": 2,
+                        "BallisticSkill": 2,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 25,
+                    "isHero": true,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [
+                        "Blessed Sight"
+                    ],
+                    "SkillLists": [
+                        "Academic",
+                        "Combat",
+                        "Speed",
+                        "Sigmar"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "SigmarEquipment",
+                    "include": [
+                        0,
+                        1
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Novice",
+                    "Characteristics": {
+                        "Movement": 4,
+                        "WeaponSkill": 2,
+                        "BallisticSkill": 2,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 6
+                    },
+                    "Price": 15,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "isLarge": false,
+                    "Skills": [],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "SigmarEquipment",
+                    "include": [
+                        0,
+                        10
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Sigmarite Sister",
+                    "Characteristics": {
+                        "Movement": 4,
+                        "WeaponSkill": 3,
+                        "BallisticSkill": 3,
+                        "Strength": 3,
+                        "Toughness": 3,
+                        "Wounds": 1,
+                        "Initiative": 3,
+                        "Attacks": 1,
+                        "Leadership": 7
+                    },
+                    "Price": 25,
+                    "isHero": false,
+                    "isHiredSword": false,
+                    "Skills": [],
+                    "SkillLists": [],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": "SigmarEquipment",
+                    "include": [
+                        0,
+                        100
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40px;
+}
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-header-warband-container {
+  display: "inline-block"
+}
+
+.App-header-warband-container-section {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.App-header-warband-container-section2 {
+  clear: left;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.App-button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  width: 200px;
+  clear: left;
+  float: left;
+}
+.App-link {
+  color: #61dafb;
+}
+.rc-select {
+  width: 100%;
+  margin-top: 10px;
+}
+.rc-select-selection-selected-value {
+  font-size: 14px;
+}
+.rc-select-dropdown-menu-item {
+  font-size: 14px;
+}
+.app-input {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #666;
+  height: 22px;
+}
