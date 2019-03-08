@@ -6,7 +6,7 @@ import { store } from "..";
 
 const AddUnitBtn = ({ selectedUnit }: { selectedUnit: IUnit }) => {
     const handleClick = () => {
-        // store.dispatch({ type: ADD_UNIT, roster: addUnit(selectedUnit) });
+        store.dispatch({ type: ADD_UNIT, addedUnit: selectedUnit });
         return undefined;
     };
 
