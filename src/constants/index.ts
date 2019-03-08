@@ -1,3 +1,4 @@
+import { IAppState } from "../utilities/utils";
 
 export const SET_ARMY = "SET_ARMY";
 export type SET_ARMY = typeof SET_ARMY;
@@ -25,3 +26,33 @@ export type SET_OBJECTIVE = typeof SET_OBJECTIVE;
 
 export const SET_SELECTED_UNIT = "SET_SELECTED_UNIT";
 export type SET_SELECTED_UNIT = typeof SET_SELECTED_UNIT;
+
+
+export const appInitState: IAppState = {
+    selectedArmy: "",
+    selectedAlignment: "",
+    selectedObjective: "",
+    selectedUnit: undefined,
+    listOfAlignments: [
+        "Lawful",
+        "Lawful/Neutral",
+        "Neutral",
+        "Neutral/Chaotic",
+        "Chaotic",
+    ],
+    listOfObjectives: [
+        "The Scion of Chaos",
+        "The Scourge of the Realm",
+        "The Celestial Protectorate",
+        "The Lure of Fortune",
+        "The Silent Threat",
+        "The Damned Shall Burn",
+    ],
+    listOfUnits: [],
+    armyTreasury: 0,
+    armyStash: [],
+    armyUnits: [],
+    armyCampaignPoints: 0,
+    armyWyrdstoneShards: 0,
+    armyAchievements: [],
+}

@@ -1,10 +1,11 @@
 import { ObjectiveAction } from "../actions";
-import { SET_OBJECTIVE } from "../constants";
+import { appInitState, SET_OBJECTIVE } from "../constants";
+import { IAppState } from "../utilities/utils";
 
-export function objectiveReducer(state: string = "", action: ObjectiveAction): string {
+export function objectiveReducer(state: IAppState = appInitState, action: ObjectiveAction): IAppState {
     switch (action.type) {
         case SET_OBJECTIVE:
-            return action.selectedObjective;
+            return { ...state, selectedObjective: action.selectedObjective };
         default:
             return state;
     }

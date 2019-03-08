@@ -10,6 +10,7 @@
             "objectives": [
                 "The Scion of Chaos"
             ],
+			"armyRules": [],
             "units": [
                 {
                     "name": "Beastmen Chief",
@@ -362,7 +363,7 @@
         {
             "name": "Dwarven Rangers",
             "startingCapital": 500,
-            "sizeLimit": 15,
+            "sizeLimit": 12,
             "alignments": [
                 "Lawful/Neutral",
                 "Neutral"
@@ -371,7 +372,133 @@
                 "The Celestial Protectorate",
                 "The Lure of Fortune"
             ],
-            "units": []
+			"armyRules": [
+				"GrudgeBearers",
+				"Incomparable Miners",
+				"Don't Trust 'Em"
+			],
+            "units": [
+                {
+                    "name": "Runesmith",
+                    "Characteristics": {
+                        "Movement": 3,
+                        "WeaponSkill": 5,
+                        "BallisticSkill": 4,
+                        "Strength": 3,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 2,
+                        "Attacks": 1,
+                        "Leadership": 10
+                    },
+                    "Price": 85,
+                    "isHero": true,
+                    "isLarge": false,
+                    "Skills": [
+                        "Leader",
+						"Inscribe Runes",
+                        "Hard Head",
+						"Hard to Kill",
+						"Hate Orcs & Goblins",
+						"Armour",
+						"Distrustful of Sorcery"
+                    ],
+                    "SkillLists": [
+                        "Academic",
+                        "Strength",
+                        "Combat",
+                        "Shooting",
+                        "Dwarven"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": [
+                        "WarriorEquipment"
+                    ],
+                    "include": [
+                        1,
+                        1
+                    ],
+                    "experience": 20,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+                {
+                    "name": "Apprentice Runesmith",
+                    "Characteristics": {
+                        "Movement": 3,
+                        "WeaponSkill": 3,
+                        "BallisticSkill": 2,
+                        "Strength": 3,
+                        "Toughness": 4,
+                        "Wounds": 1,
+                        "Initiative": 2,
+                        "Attacks": 1,
+                        "Leadership": 8
+                    },
+                    "Price": 40,
+                    "isHero": true,
+                    "isLarge": false,
+                    "Skills": [
+						"Extra Set of Hands",
+                        "Hard Head",
+						"Hard to Kill",
+						"Hate Orcs & Goblins",
+						"Armour",
+						"Distrustful of Sorcery"
+					],
+                    "SkillLists": [
+                        "Academic",
+                        "Strength",
+                        "Combat",
+                        "Speed",
+                        "Sigmar"
+                    ],
+                    "Spells": [],
+                    "SpellLists": [],
+                    "allowedEquipment": [
+                        "WarriorEquipment"
+                    ],
+                    "include": [
+                        0,
+                        1
+                    ],
+                    "experience": 0,
+                    "equipment": [
+                        "Dagger"
+                    ]
+                },
+             ],
+            "allowedEquipment": [
+                {
+                    "name": "WarriorEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Dagger",
+                            "cost": 2
+                        }
+                    ]
+                },
+                {
+                    "name": "SlayerEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Dagger",
+                            "cost": 2
+                        }
+                    ]
+                },
+				{
+                    "name": "CrossbowmenEquipment",
+                    "equipmentList": [
+                        {
+                            "name": "Dagger",
+                            "cost": 2
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "Orcs & Goblins",
@@ -384,6 +511,7 @@
             "objectives": [
                 "The Scourge of the Realm"
             ],
+			"armyRules": [],
             "units": []
         },
         {
@@ -398,6 +526,7 @@
             "objectives": [
                 "The Celestial Protectorate"
             ],
+			"armyRules": [],
             "units": []
         },
         {
@@ -411,6 +540,7 @@
                 "The Celestial Protectorate",
                 "The Damned Shall Burn"
             ],
+			"armyRules": [],
             "units": [
                 {
                     "name": "Sigmarite Matriarch",
