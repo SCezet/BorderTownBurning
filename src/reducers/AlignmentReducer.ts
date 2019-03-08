@@ -1,10 +1,11 @@
 import { SetAlignmentAction } from "../actions";
-import { SET_ALIGNMENT } from "../constants";
+import { appInitState, SET_ALIGNMENT } from "../constants";
+import { IAppState } from "../utilities/utils";
 
-export function alignmentReducer(state: string = "", action: SetAlignmentAction): string {
+export function alignmentReducer(state: IAppState = appInitState, action: SetAlignmentAction): IAppState {
     switch (action.type) {
         case SET_ALIGNMENT:
-            return action.selectedAlignment;
+            return { ...state, selectedAlignment: action.selectedAlignment };
         default:
             return state;
     }

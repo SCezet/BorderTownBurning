@@ -10,7 +10,7 @@ export interface IAppState {
     selectedArmy: string;
     selectedAlignment: string;
     selectedObjective: string;
-    selectedUnit: IUnit;
+    selectedUnit: IUnit | undefined;
     listOfAlignments: string[];
     listOfObjectives: string[];
     listOfUnits: IUnit[];
