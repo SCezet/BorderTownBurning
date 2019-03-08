@@ -1,11 +1,11 @@
 import { RestrictAlignmentsAction } from "../actions";
-import { RESTRICT_ALIGNMENTS } from "../constants";
-import { getAllAlignments } from "../utilities/utils";
+import { appInitState, RESTRICT_ALIGNMENTS } from "../constants";
+import { IAppState } from "../utilities/utils";
 
-export function restrictAlignmentReducer(state: string[] = getAllAlignments(), action: RestrictAlignmentsAction): string[] {
+export function restrictAlignmentReducer(state: IAppState = appInitState, action: RestrictAlignmentsAction): IAppState {
     switch (action.type) {
         case RESTRICT_ALIGNMENTS:
-            return action.listOfAlignments;
+            return { ...state, listOfAlignments: action.listOfAlignments };
         default:
             return state;
     }

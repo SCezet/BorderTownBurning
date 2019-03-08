@@ -1,10 +1,11 @@
 import { SetSelectedUnitAction } from "../actions";
-import { SET_SELECTED_UNIT } from "../constants";
+import { appInitState, SET_SELECTED_UNIT } from "../constants";
+import { IAppState } from "../utilities/utils";
 
-export function unitReducer(state: string = "", action: SetSelectedUnitAction): string {
+export function unitReducer(state: IAppState = appInitState, action: SetSelectedUnitAction): IAppState {
     switch (action.type) {
         case SET_SELECTED_UNIT:
-            return action.selectedUnit;
+            return { ...state, selectedUnit: action.selectedUnit };
         default:
             return state;
     }
