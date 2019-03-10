@@ -1,4 +1,4 @@
-import { IAppState } from "../utilities/utils";
+import { ISelectionState } from "../utilities/utils";
 
 export const SET_ARMY = "SET_ARMY";
 export type SET_ARMY = typeof SET_ARMY;
@@ -27,12 +27,32 @@ export type SET_OBJECTIVE = typeof SET_OBJECTIVE;
 export const SET_SELECTED_UNIT = "SET_SELECTED_UNIT";
 export type SET_SELECTED_UNIT = typeof SET_SELECTED_UNIT;
 
-
-export const appInitState: IAppState = {
+export const initSelectionState: ISelectionState = {
     selectedArmy: "",
     selectedAlignment: "",
     selectedObjective: "",
-    selectedUnit: undefined,
+    selectedUnit: {
+        name: "",
+        Characteristics: {
+            Movement: 0,
+            WeaponSkill: 0,
+            BallisticSkill: 0,
+            Strength: 0,
+            Toughness: 0,
+            Wounds: 0,
+            Initiative: 0,
+            Attacks: 0,
+            Leadership: 0
+        },
+        Price: 0,
+        isHero: false,
+        Skills: [],
+        SkillLists: [],
+        allowedEquipment: "",
+        include: [],
+        experience: 0,
+        equipment: []
+    },
     listOfAlignments: [
         "Lawful",
         "Lawful/Neutral",
@@ -49,9 +69,9 @@ export const appInitState: IAppState = {
         "The Damned Shall Burn",
     ],
     listOfUnits: [],
+    warbandRoster: [],
     armyTreasury: 0,
     armyStash: [],
-    armyUnits: [],
     armyCampaignPoints: 0,
     armyWyrdstoneShards: 0,
     armyAchievements: [],

@@ -3,20 +3,22 @@ import React from "react";
 import { connect } from "react-redux";
 import "rc-select/assets/index.css";
 import { store } from "..";
-import { RESTRICT_ALIGNMENTS, RESTRICT_OBJECTIVES, SET_ALIGNMENT, SET_ARMY, SET_OBJECTIVE, RESTRICT_UNITS } from "../constants";
-import { getArmyList, getRestrictedAlignmentList, getRestrictedObjectiveList, getUnits } from "../utilities/utils";
+import { RESTRICT_ALIGNMENTS, RESTRICT_OBJECTIVES, SET_ALIGNMENT, SET_ARMY, SET_OBJECTIVE, RESTRICT_UNITS, ADD_MONEY_TO_TREASURY } from "../actions";
+import { getArmyList, getRestrictedAlignmentList, getRestrictedObjectiveList, getUnits, getArmyTreasury } from "../utilities/utils";
 
 const ArDropdown = () => {
     const armyList = getArmyList();
     const dropDownList = armyList.map((armyName) => <Option key={armyName} value={armyName}>{armyName}</Option>);
 
     const handleChange = (selectedElement: string) => {
-        store.dispatch({ type: SET_ARMY, selectedArmy: selectedElement });
-        store.dispatch({ type: SET_ALIGNMENT, selectedAlignment: "" });
-        store.dispatch({ type: SET_OBJECTIVE, selectedObjective: "" });
-        store.dispatch({ type: RESTRICT_ALIGNMENTS, listOfAlignments: getRestrictedAlignmentList(selectedElement) });
-        store.dispatch({ type: RESTRICT_OBJECTIVES, listOfObjectives: getRestrictedObjectiveList(selectedElement) });
-        store.dispatch({ type: RESTRICT_UNITS, listOfUnits: getUnits(selectedElement) });
+        store.dispatch({ type: SET_ARMY, payload: selectedElement });
+        store.dispatch({ type: SET_ALIGNMENT, payload: "" });
+        store.dispatch({ type: SET_OBJECTIVE, payload: "" });
+        store.dispatch({ type: ADD_MONEY_TO_TREASURY, payload: getArmyTreasury(selectedElement) });
+        store.dispatch({ type: RESTRICT_ALIGNMENTS, payload: getRestrictedAlignmentList(selectedElement) });
+        store.dispatch({ type: RESTRICT_OBJECTIVES, payload: getRestrictedObjectiveList(selectedElement) });
+        store.dispatch({ type: RESTRICT_UNITS, payload: getUnits(selectedElement) });
+        console.log(store.getState());
     };
 
     return (

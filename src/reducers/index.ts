@@ -1,1 +1,1 @@
-export { rootReducer } from "./RootReducer";
+export { stateReducer } from "./AppStateReducer";

@@ -4,22 +4,23 @@ export interface IArmy {
     alignments: string[];
     objectives: string[];
     units: IUnit[];
+    startingCapital: number;
 }
 
-export interface IAppState {
+export interface ISelectionState {
     selectedArmy: string;
     selectedAlignment: string;
     selectedObjective: string;
-    selectedUnit: IUnit | undefined;
+    selectedUnit: IUnit;
     listOfAlignments: string[];
     listOfObjectives: string[];
     listOfUnits: IUnit[];
-    armyTreasury: number,
-    armyStash: string[],
-    armyUnits: IUnit[],
+    warbandRoster: IUnit[];
+    armyTreasury: number;
+    armyStash: string[];
     armyCampaignPoints: number,
     armyWyrdstoneShards: number,
-    armyAchievements: string[]
+    armyAchievements: string[],
 }
 
 export interface IUnit {
@@ -27,7 +28,6 @@ export interface IUnit {
     Characteristics: ICharacteristics;
     Price: number;
     isHero: boolean;
-    isHiredSword: boolean;
     Skills: string[];
     SkillLists: string[];
     allowedEquipment: string;
@@ -48,27 +48,6 @@ export interface ICharacteristics {
     Leadership: number;
 }
 
-export function getAllAlignments(): string[] {
-    return [
-        "Lawful",
-        "Lawful/Neutral",
-        "Neutral",
-        "Neutral/Chaotic",
-        "Chaotic",
-    ];
-}
-
-export function getAllObjectives(): string[] {
-    return [
-        "The Scion of Chaos",
-        "The Scourge of the Realm",
-        "The Celestial Protectorate",
-        "The Lure of Fortune",
-        "The Silent Threat",
-        "The Damned Shall Burn",
-    ];
-}
-
 const ArmyList: IArmy[] = require("../constants/Armies.json").armies;
 
 export function getArmyList(): string[] {
@@ -81,6 +60,15 @@ export function getRestrictedAlignmentList(selectedArmy: string): string[] {
         return Army.alignments;
     } else {
         return [];
+    }
+}
+
+export function getArmyTreasury(selectedArmy: string): number {
+    const Army = ArmyList.find((army) => army.name === selectedArmy);
+    if (Army !== undefined) {
+        return Army.startingCapital;
+    } else {
+        return 0;
     }
 }
 
@@ -102,7 +90,6 @@ export function getArmySizeLimit(selectedArmy: string): number {
     }
 }
 
-
 export function getUnits(selectedArmy: string): IUnit[] {
     const Army = ArmyList.find((army) => army.name === selectedArmy);
     if (Army !== undefined) {
@@ -110,14 +97,4 @@ export function getUnits(selectedArmy: string): IUnit[] {
     } else {
         return [];
     }
-}
-
-export function getHeroes(selectedArmy: string): IUnit[] {
-    const allUnits = getUnits(selectedArmy);
-    return allUnits.filter((unit) => unit.isHero && !unit.isHiredSword);
-}
-
-export function getHenchmen(selectedArmy: string): IUnit[] {
-    const allUnits = getUnits(selectedArmy);
-    return allUnits.filter((unit) => !unit.isHero);
 }

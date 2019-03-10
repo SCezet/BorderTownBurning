@@ -3,37 +3,40 @@ import { connect } from "react-redux";
 import { AlignmentDropdown } from "./components/AlignmentDropdown";
 import { ArmyDropdown } from "./components/ArmyDropdown";
 import { ObjectiveDropdown } from "./components/ObjectiveDropdown";
-import { HeroDropdown } from "./components/HeroDropdown";
-import { IAppState } from "./utilities/utils";
+import { UnitDropdown } from "./components/UnitDropdown";
+import { ISelectionState } from "./utilities/utils";
 import { AddUnitButton } from "./components/AddUnitButton";
+import { UnitContainer } from "./components/RosterUnitContainer";
 
-function App(props: IAppState) {
+function App(props: ISelectionState) {
     return (
         <div>
             <div>{props.selectedArmy}</div>
             <div>{props.selectedAlignment}</div>
             <div>{props.selectedObjective}</div>
+            <div>{props.armyTreasury}</div>
+            <div>{props.armyStash}</div>
             <ArmyDropdown></ArmyDropdown>
             <AlignmentDropdown listOfAlignments={props.listOfAlignments}></AlignmentDropdown>
             <ObjectiveDropdown listOfObjectives={props.listOfObjectives}></ObjectiveDropdown>
-            <HeroDropdown listOfUnits={props.listOfUnits}></HeroDropdown>
+            <UnitDropdown listOfUnits={props.listOfUnits}></UnitDropdown>
             <AddUnitButton selectedUnit={props.selectedUnit}></AddUnitButton>
-            {/* <AppBody></AppBody> */}
+            <UnitContainer warbandRoster={props.warbandRoster}></UnitContainer>
         </div>
     )
 }
 
-const mapStateToProps = (state: IAppState) => ({
+const mapStateToProps = (state: ISelectionState) => ({
     listOfAlignments: state.listOfAlignments,
     listOfObjectives: state.listOfObjectives,
     listOfUnits: state.listOfUnits,
-    selectedAlignment: state.selectedAlignment,
     selectedArmy: state.selectedArmy,
+    selectedAlignment: state.selectedAlignment,
     selectedObjective: state.selectedObjective,
-    selectedUnit: state.selectedUnit,
+    warbandRoster: state.warbandRoster,
     armyTreasury: state.armyTreasury,
     armyStash: state.armyStash,
-    armyUnits: state.armyUnits,
+    selectedUnit: state.selectedUnit,
     armyCampaignPoints: state.armyCampaignPoints,
     armyWyrdstoneShards: state.armyWyrdstoneShards,
     armyAchievements: state.armyAchievements

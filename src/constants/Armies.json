@@ -10,7 +10,7 @@
             "objectives": [
                 "The Scion of Chaos"
             ],
-			"armyRules": [],
+            "armyRules": [],
             "units": [
                 {
                     "name": "Beastmen Chief",
@@ -372,11 +372,11 @@
                 "The Celestial Protectorate",
                 "The Lure of Fortune"
             ],
-			"armyRules": [
-				"GrudgeBearers",
-				"Incomparable Miners",
-				"Don't Trust 'Em"
-			],
+            "armyRules": [
+                "GrudgeBearers",
+                "Incomparable Miners",
+                "Don't Trust 'Em"
+            ],
             "units": [
                 {
                     "name": "Runesmith",
@@ -396,12 +396,12 @@
                     "isLarge": false,
                     "Skills": [
                         "Leader",
-						"Inscribe Runes",
+                        "Inscribe Runes",
                         "Hard Head",
-						"Hard to Kill",
-						"Hate Orcs & Goblins",
-						"Armour",
-						"Distrustful of Sorcery"
+                        "Hard to Kill",
+                        "Hate Orcs & Goblins",
+                        "Armour",
+                        "Distrustful of Sorcery"
                     ],
                     "SkillLists": [
                         "Academic",
@@ -441,13 +441,13 @@
                     "isHero": true,
                     "isLarge": false,
                     "Skills": [
-						"Extra Set of Hands",
+                        "Extra Set of Hands",
                         "Hard Head",
-						"Hard to Kill",
-						"Hate Orcs & Goblins",
-						"Armour",
-						"Distrustful of Sorcery"
-					],
+                        "Hard to Kill",
+                        "Hate Orcs & Goblins",
+                        "Armour",
+                        "Distrustful of Sorcery"
+                    ],
                     "SkillLists": [
                         "Academic",
                         "Strength",
@@ -468,8 +468,8 @@
                     "equipment": [
                         "Dagger"
                     ]
-                },
-             ],
+                }
+            ],
             "allowedEquipment": [
                 {
                     "name": "WarriorEquipment",
@@ -489,7 +489,7 @@
                         }
                     ]
                 },
-				{
+                {
                     "name": "CrossbowmenEquipment",
                     "equipmentList": [
                         {
@@ -511,7 +511,7 @@
             "objectives": [
                 "The Scourge of the Realm"
             ],
-			"armyRules": [],
+            "armyRules": [],
             "units": []
         },
         {
@@ -526,7 +526,7 @@
             "objectives": [
                 "The Celestial Protectorate"
             ],
-			"armyRules": [],
+            "armyRules": [],
             "units": []
         },
         {
@@ -540,7 +540,7 @@
                 "The Celestial Protectorate",
                 "The Damned Shall Burn"
             ],
-			"armyRules": [],
+            "armyRules": [],
             "units": [
                 {
                     "name": "Sigmarite Matriarch",
