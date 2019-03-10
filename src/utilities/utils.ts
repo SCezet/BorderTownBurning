@@ -1,52 +1,5 @@
-export interface IArmy {
-    name: string;
-    sizeLimit: number;
-    alignments: string[];
-    objectives: string[];
-    units: IUnit[];
-    startingCapital: number;
-}
+import { IArmy, IUnit } from "../constants";
 
-export interface ISelectionState {
-    selectedArmy: string;
-    selectedAlignment: string;
-    selectedObjective: string;
-    selectedUnit: IUnit;
-    listOfAlignments: string[];
-    listOfObjectives: string[];
-    listOfUnits: IUnit[];
-    warbandRoster: IUnit[];
-    armyTreasury: number;
-    armyStash: string[];
-    armyCampaignPoints: number,
-    armyWyrdstoneShards: number,
-    armyAchievements: string[],
-}
-
-export interface IUnit {
-    name: string;
-    Characteristics: ICharacteristics;
-    Price: number;
-    isHero: boolean;
-    Skills: string[];
-    SkillLists: string[];
-    allowedEquipment: string;
-    include: number[];
-    experience: number;
-    equipment: string[];
-}
-
-export interface ICharacteristics {
-    Movement: number;
-    WeaponSkill: number;
-    BallisticSkill: number;
-    Strength: number;
-    Toughness: number;
-    Wounds: number;
-    Initiative: number;
-    Attacks: number;
-    Leadership: number;
-}
 
 const ArmyList: IArmy[] = require("../constants/Armies.json").armies;
 

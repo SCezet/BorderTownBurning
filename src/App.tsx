@@ -4,9 +4,9 @@ import { AlignmentDropdown } from "./components/AlignmentDropdown";
 import { ArmyDropdown } from "./components/ArmyDropdown";
 import { ObjectiveDropdown } from "./components/ObjectiveDropdown";
 import { UnitDropdown } from "./components/UnitDropdown";
-import { ISelectionState } from "./utilities/utils";
 import { AddUnitButton } from "./components/AddUnitButton";
 import { UnitContainer } from "./components/RosterUnitContainer";
+import { ISelectionState } from "./constants";
 
 function App(props: ISelectionState) {
     return (

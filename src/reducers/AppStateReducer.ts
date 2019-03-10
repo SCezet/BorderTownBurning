@@ -1,6 +1,5 @@
-import { StateActions, SET_ARMY, SET_ALIGNMENT, SET_OBJECTIVE, RESTRICT_ALIGNMENTS, RESTRICT_OBJECTIVES, RESTRICT_UNITS, SET_UNIT, ADD_MONEY_TO_TREASURY, SUBSTRACT_MONEY_FROM_TREASURY, ADD_UNIT_TO_ROSTER, REMOVE_UNIT_FROM_ROSTER } from "../actions";
-import { initSelectionState } from "../constants";
-import { ISelectionState } from "../utilities/utils";
+import { StateActions, SET_ARMY, SET_ALIGNMENT, SET_OBJECTIVE, RESTRICT_ALIGNMENTS, RESTRICT_OBJECTIVES, RESTRICT_UNITS, SET_UNIT, ADD_MONEY_TO_TREASURY, SUBSTRACT_MONEY_FROM_TREASURY, ADD_UNIT_TO_ROSTER, REMOVE_UNIT_FROM_ROSTER, REMOVE_UNIT_FROM_UNITLIST } from "../actions";
+import { initSelectionState, ISelectionState } from "../constants";
 
 export function stateReducer(state: ISelectionState = initSelectionState, action: StateActions): ISelectionState {
     switch (action.type) {
@@ -26,6 +25,8 @@ export function stateReducer(state: ISelectionState = initSelectionState, action
             return { ...state, armyTreasury: state.armyTreasury + action.payload };
         case SUBSTRACT_MONEY_FROM_TREASURY:
             return { ...state, armyTreasury: state.armyTreasury - action.payload };
+        case REMOVE_UNIT_FROM_UNITLIST:
+            return { ...state, listOfUnits: state.listOfUnits.filter((unit) => unit.name !== action.payload) };
         default:
             return state;
     }

@@ -1,4 +1,4 @@
-import { IUnit } from "../utilities/utils";
+import { IUnit } from "../constants";
 
 export const SET_ARMY = 'SET_ARMY';
 export const SET_ALIGNMENT = 'SET_ALIGNMENT';
@@ -7,6 +7,7 @@ export const SET_UNIT = 'SET_UNIT';
 export const RESTRICT_ALIGNMENTS = 'RESTRICT_ALIGNMENTS';
 export const RESTRICT_OBJECTIVES = 'RESTRICT_OBJECTIVES';
 export const RESTRICT_UNITS = 'RESTRICT_UNITS';
+export const REMOVE_UNIT_FROM_UNITLIST = 'REMOVE_UNIT_FROM_UNITLIST';
 export const ADD_MONEY_TO_TREASURY = 'ADD_MONEY_TO_TREASURY';
 export const SUBSTRACT_MONEY_FROM_TREASURY = 'SUBSTRACT_MONEY_FROM_TREASURY';
 export const ADD_UNIT_TO_ROSTER = 'ADD_UNIT_TO_ROSTER';
@@ -56,6 +57,12 @@ class RemoveUnitFromRoster {
     readonly type = REMOVE_UNIT_FROM_ROSTER
     constructor(public payload: IUnit) { }
 }
+
+class RemoveUnitFromUnitList {
+    readonly type = REMOVE_UNIT_FROM_UNITLIST
+    constructor(public payload: string) { }
+}
+
 export type StateActions = SetArmy | SetAlignment | SetObjective | RestrictAlignment |
     RestrictObjectives | RestrictUnits | SetUnit | SubstractMoneyFromTreasury | AddMoneyToTreasury |
-    RemoveUnitFromRoster | AddUnitToRoster;
+    RemoveUnitFromRoster | AddUnitToRoster | RemoveUnitFromUnitList;

@@ -1,5 +1,3 @@
-import { ISelectionState } from "../utilities/utils";
-
 export const SET_ARMY = "SET_ARMY";
 export type SET_ARMY = typeof SET_ARMY;
 
@@ -27,32 +25,34 @@ export type SET_OBJECTIVE = typeof SET_OBJECTIVE;
 export const SET_SELECTED_UNIT = "SET_SELECTED_UNIT";
 export type SET_SELECTED_UNIT = typeof SET_SELECTED_UNIT;
 
+export const initUnit: IUnit = {
+    name: "",
+    Characteristics: {
+        Movement: 0,
+        WeaponSkill: 0,
+        BallisticSkill: 0,
+        Strength: 0,
+        Toughness: 0,
+        Wounds: 0,
+        Initiative: 0,
+        Attacks: 0,
+        Leadership: 0
+    },
+    Price: 0,
+    isHero: false,
+    Skills: [],
+    SkillLists: [],
+    allowedEquipment: "",
+    include: [],
+    experience: 0,
+    equipment: []
+}
+
 export const initSelectionState: ISelectionState = {
     selectedArmy: "",
     selectedAlignment: "",
     selectedObjective: "",
-    selectedUnit: {
-        name: "",
-        Characteristics: {
-            Movement: 0,
-            WeaponSkill: 0,
-            BallisticSkill: 0,
-            Strength: 0,
-            Toughness: 0,
-            Wounds: 0,
-            Initiative: 0,
-            Attacks: 0,
-            Leadership: 0
-        },
-        Price: 0,
-        isHero: false,
-        Skills: [],
-        SkillLists: [],
-        allowedEquipment: "",
-        include: [],
-        experience: 0,
-        equipment: []
-    },
+    selectedUnit: initUnit,
     listOfAlignments: [
         "Lawful",
         "Lawful/Neutral",
@@ -75,4 +75,54 @@ export const initSelectionState: ISelectionState = {
     armyCampaignPoints: 0,
     armyWyrdstoneShards: 0,
     armyAchievements: [],
+}
+
+export interface IArmy {
+    name: string;
+    sizeLimit: number;
+    alignments: string[];
+    objectives: string[];
+    units: IUnit[];
+    startingCapital: number;
+}
+
+export interface ISelectionState {
+    selectedArmy: string;
+    selectedAlignment: string;
+    selectedObjective: string;
+    selectedUnit: IUnit;
+    listOfAlignments: string[];
+    listOfObjectives: string[];
+    listOfUnits: IUnit[];
+    warbandRoster: IUnit[];
+    armyTreasury: number;
+    armyStash: string[];
+    armyCampaignPoints: number,
+    armyWyrdstoneShards: number,
+    armyAchievements: string[],
+}
+
+export interface IUnit {
+    name: string;
+    Characteristics: ICharacteristics;
+    Price: number;
+    isHero: boolean;
+    Skills: string[];
+    SkillLists: string[];
+    allowedEquipment: string;
+    include: number[];
+    experience: number;
+    equipment: string[];
+}
+
+export interface ICharacteristics {
+    Movement: number;
+    WeaponSkill: number;
+    BallisticSkill: number;
+    Strength: number;
+    Toughness: number;
+    Wounds: number;
+    Initiative: number;
+    Attacks: number;
+    Leadership: number;
 }

@@ -2,9 +2,9 @@ import "rc-select/assets/index.css";
 import React from "react";
 import Select, { Option } from "rc-select";
 import { connect } from "react-redux";
-import { ISelectionState, IUnit } from "../utilities/utils";
 import { SET_UNIT } from "../actions";
 import { store } from "..";
+import { IUnit, ISelectionState } from "../constants";
 
 const UnitsDropdown = ({ listOfUnits }: { listOfUnits: IUnit[] }) => {
     const dropDownList = listOfUnits.map((unit: IUnit) =>

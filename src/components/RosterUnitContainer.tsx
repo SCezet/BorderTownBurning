@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import "rc-select/assets/index.css";
-import { IUnit, ISelectionState } from "../utilities/utils";
 import { store } from "..";
 import { REMOVE_UNIT_FROM_ROSTER, ADD_MONEY_TO_TREASURY } from "../actions";
+import { IUnit, ISelectionState } from "../constants";
 
 const RosterUnitContainer = ({ warbandRoster }: { warbandRoster: IUnit[] }) => {
     const unitDivs = warbandRoster.map((unit) => {

@@ -4,8 +4,8 @@ import "rc-select/assets/index.css";
 import React from "react";
 import { connect } from "react-redux";
 import { store } from "..";
-import { ISelectionState } from "../utilities/utils";
 import { SET_ALIGNMENT } from "../actions";
+import { ISelectionState } from "../constants";
 const AlDropdown = ({ listOfAlignments }: { listOfAlignments: string[] }) => {
     const dropDownList = listOfAlignments.map((entry) => <Option key={entry} value={entry}>{entry}</Option>);
 
