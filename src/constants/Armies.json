@@ -318,7 +318,8 @@
                             "name": "Shield",
                             "cost": 5
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 },
                 {
                     "name": "UngorEquipment",
@@ -327,7 +328,8 @@
                             "name": "Spear",
                             "cost": 5
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 },
                 {
                     "name": "BeastmenEquipment",
@@ -356,7 +358,8 @@
                             "name": "Helmet",
                             "cost": 10
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 }
             ]
         },
@@ -747,7 +750,8 @@
                             "name": "Helmet",
                             "cost": 10
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 },
                 {
                     "name": "DwarvenRangerEquipment",
@@ -792,7 +796,8 @@
                             "name": "Helmet",
                             "cost": 10
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 }
             ]
         },
@@ -1074,7 +1079,8 @@
                             "name": "Sling",
                             "cost": 2
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 },
                 {
                     "name": "SigmarArmour",
@@ -1099,7 +1105,8 @@
                             "name": "Helmet",
                             "cost": 10
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 },
                 {
                     "name": "SigmarHeroEquipment",
@@ -1116,7 +1123,8 @@
                             "name": "Holy Relic",
                             "cost": 15
                         }
-                    ]
+                    ],
+                    "modificationOptions": []
                 }
             ]
         }
