@@ -8,7 +8,8 @@ const AddUnitBtn = ({ selectedUnit }: { selectedUnit: IUnit }) => {
     const handleClick = () => {
         store.dispatch({ type: ADD_UNIT_TO_ROSTER, payload: selectedUnit });
         store.dispatch({ type: SUBSTRACT_MONEY_FROM_TREASURY, payload: selectedUnit.Price });
-        if (selectedUnit.include[1] === 1) {
+        const unitsInRoster = store.getState().warbandRoster.filter((unit) => unit.name === selectedUnit.name);
+        if (selectedUnit.include[1] === 1 || selectedUnit.include[1] === unitsInRoster.length) {
             store.dispatch({ type: REMOVE_UNIT_FROM_UNITLIST, payload: selectedUnit.name });
             store.dispatch({ type: SET_UNIT, payload: initUnit });
         }
