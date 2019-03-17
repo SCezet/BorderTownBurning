@@ -1,0 +1,303 @@
+{
+    "equipment": [
+        {
+            "MeleeWeapons": [
+                {
+                    "name": "Dagger",
+                    "cost": 2,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Armour yield",
+                        "Off-Hand"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Mace",
+                    "cost": 3,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Concussion"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Hammer",
+                    "cost": 3,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Concussion"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Club",
+                    "cost": 3,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Concussion"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Axe",
+                    "cost": 5,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Cutting Edge"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Spear",
+                    "cost": 5,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Strike First",
+                        "Unwieldy",
+                        "Cavalry Bonus(1)"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Halberd",
+                    "cost": 10,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Two-Handed"
+                    ],
+                    "strengthModifier": "+1",
+                    "restrictions": []
+                },
+                {
+                    "name": "Dwarf Axe",
+                    "cost": 15,
+                    "rarity": 8,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Cutting Edge",
+                        "Parry"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": [
+                        "Dwarves only"
+                    ]
+                },
+                {
+                    "name": "Sword",
+                    "cost": 10,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Parry"
+                    ],
+                    "strengthModifier": "",
+                    "restrictions": []
+                },
+                {
+                    "name": "Double-handed Weapon",
+                    "cost": 15,
+                    "rarity": 0,
+                    "weaponType": "Melee",
+                    "rules": [
+                        "Two-Handed",
+                        "Strike Last"
+                    ],
+                    "strengthModifier": "+2",
+                    "restrictions": []
+                }
+            ]
+        },
+        {
+            "MissileWeapons": [
+                {
+                    "name": "Pistol",
+                    "cost": 15,
+                    "weaponType": "Shooting",
+                    "rules": [
+                        "Prepare Shot",
+                        "Save Modifier",
+                        "Hand-to-Hand",
+                        "Blackpowder"
+                    ],
+                    "strength": 4,
+                    "range": 6,
+                    "restrictions": []
+                },
+                {
+                    "name": "Brace of Pistols",
+                    "cost": 30,
+                    "weaponType": "Shooting",
+                    "rules": [
+                        "Prepare Shot",
+                        "Save Modifier",
+                        "Hand-to-Hand",
+                        "Blackpowder"
+                    ],
+                    "strength": 4,
+                    "range": 6,
+                    "restrictions": []
+                },
+                {
+                    "name": "Crossbow",
+                    "cost": 25,
+                    "weaponType": "Shooting",
+                    "rules": [
+                        "Move or Fire"
+                    ],
+                    "strength": 4,
+                    "range": 30,
+                    "restrictions": []
+                }
+            ]
+        },
+        {
+            "Armour": [
+                {
+                    "name": "Light Armour",
+                    "cost": 20,
+                    "rarity": 0,
+                    "armourType": "Suit",
+                    "rules": [],
+                    "Armour": 2,
+                    "restrictions": []
+                },
+                {
+                    "name": "Heavy Armour",
+                    "cost": 50,
+                    "rarity": 0,
+                    "armourType": "Suit",
+                    "rules": [],
+                    "Armour": 3,
+                    "restrictions": []
+                },
+                {
+                    "name": "Gromril Armour",
+                    "cost": 150,
+                    "rarity": 11,
+                    "armourType": "Suit",
+                    "rules": [
+                        "Gromril"
+                    ],
+                    "Armour": 4,
+                    "restrictions": [
+                        "Dwarves only"
+                    ]
+                },
+                {
+                    "name": "Lamellar Armour",
+                    "cost": 120,
+                    "rarity": 9,
+                    "armourType": "Suit",
+                    "rules": [],
+                    "Armour": 4,
+                    "restrictions": []
+                },
+                {
+                    "name": "Helmet",
+                    "cost": 10,
+                    "rarity": 0,
+                    "armourType": "Head",
+                    "rules": [
+                        "Avoid Stun"
+                    ],
+                    "Armour": 0,
+                    "restrictions": []
+                },
+                {
+                    "name": "Shield",
+                    "cost": 5,
+                    "rarity": 0,
+                    "armourType": "Shield",
+                    "rules": [],
+                    "Armour": 1,
+                    "restrictions": []
+                },
+                {
+                    "name": "Buckler",
+                    "cost": 5,
+                    "rarity": 0,
+                    "armourType": "Shield",
+                    "rules": [
+                        "Parry"
+                    ],
+                    "Armour": 0,
+                    "restrictions": []
+                },
+                {
+                    "name": "Pavise",
+                    "cost": 25,
+                    "rarity": 8,
+                    "armourType": "Shield",
+                    "rules": [
+                        "Cover"
+                    ],
+                    "Armour": 0,
+                    "restrictions": []
+                },
+                {
+                    "name": "Toughened Leathers",
+                    "cost": 5,
+                    "rarity": 0,
+                    "armourType": "Suit",
+                    "rules": [
+                        "Easy to Move in"
+                    ],
+                    "Armour": 1,
+                    "restrictions": []
+                },
+                {
+                    "name": "Ithilmar Armour",
+                    "cost": 90,
+                    "rarity": 11,
+                    "armourType": "Suit",
+                    "rules": [
+                        "Light Armour"
+                    ],
+                    "Armour": 3,
+                    "restrictions": []
+                },
+                {
+                    "name": "Chaos Armour",
+                    "cost": 185,
+                    "rarity": 13,
+                    "armourType": "Suit",
+                    "rules": [
+                        "Rarity",
+                        "Cost",
+                        "Gift of Chaos",
+                        "Spellcasters"
+                    ],
+                    "Armour": 4,
+                    "restrictions": []
+                },
+                {
+                    "name": "Bracers",
+                    "cost": 20,
+                    "rarity": 8,
+                    "armourType": "Special",
+                    "rules": [
+                        "Suit and Shield",
+                        "Parry",
+                        "Easy to Move in"
+                    ],
+                    "Armour": 0,
+                    "restrictions": []
+                }
+            ]
+        }
+    ]
+}

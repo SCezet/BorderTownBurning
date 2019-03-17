@@ -2,8 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import "rc-select/assets/index.css";
 import { store } from "..";
-import { REMOVE_UNIT_FROM_ROSTER, ADD_MONEY_TO_TREASURY } from "../actions";
+import { REMOVE_UNIT_FROM_ROSTER, ADD_MONEY_TO_TREASURY, ADD_UNIT_TO_UNITLIST, SUBTRACT_WARBAND_RATING } from "../actions";
 import { IUnit, ISelectionState } from "../constants";
+import { getEquipment } from "../utilities/utils";
+import { CharacteristicTable } from "./CharacteristicTable";
 
 const RosterUnitContainer = ({ warbandRoster }: { warbandRoster: IUnit[] }) => {
     const unitDivs = warbandRoster.map((unit) => {
@@ -11,31 +13,27 @@ const RosterUnitContainer = ({ warbandRoster }: { warbandRoster: IUnit[] }) => {
             const handleClick = () => {
                 store.dispatch({ type: REMOVE_UNIT_FROM_ROSTER, payload: unit });
                 store.dispatch({ type: ADD_MONEY_TO_TREASURY, payload: unit.Price });
+                store.dispatch({ type: SUBTRACT_WARBAND_RATING, payload: unit });
+                if (!store.getState().listOfUnits.find(listitem => listitem.name === unit.name)) {
+                    store.dispatch({ type: ADD_UNIT_TO_UNITLIST, payload: unit });
+                }
                 return undefined;
             };
+            const availableEquipment = getEquipment(unit.allowedEquipment);
+            const equipmentNames = availableEquipment.map(equipment => equipment.name)
             return (
                 <div style={{ border: "solid" }}>
                     <button onClick={() => handleClick()} style={{ width: 250 }}>
                         Remove selected Unit from warband roster
                     </button>
-                    <div>{unit.Price}</div>
-                    <div>{unit.name}</div>
-                    <div>{unit.experience}</div>
-                    <div>{unit.isHero}</div>
-                    <div>{unit.equipment}</div>
-                    <div>{unit.allowedEquipment}</div>
-                    <div>{unit.SkillLists}</div>
-                    <div>{unit.Skills}</div>
-                    <div>{unit.include}</div>
-                    <div>Attacks {unit.Characteristics.Attacks}</div>
-                    <div>WeaponSkill {unit.Characteristics.WeaponSkill}</div>
-                    <div>Strength {unit.Characteristics.Strength}</div>
-                    <div>Toughness {unit.Characteristics.Toughness}</div>
-                    <div>BallisticSkill {unit.Characteristics.BallisticSkill}</div>
-                    <div>Initiative {unit.Characteristics.Initiative}</div>
-                    <div>Movement {unit.Characteristics.Movement}</div>
-                    <div>Wounds {unit.Characteristics.Wounds}</div>
-                    <div>Leadership {unit.Characteristics.Leadership}</div>
+                    <div>Unit Cost {unit.Price}</div>
+                    <div>Unit Type {unit.name}</div>
+                    <div>Exp {unit.experience}</div>
+                    <div>Equipment {unit.equipment}</div>
+                    <div>allowed Equipment {equipmentNames}</div>
+                    <div>SkillLists {unit.SkillLists}</div>
+                    <div>Skills {unit.Skills}</div>
+                    <CharacteristicTable characteristics={unit.Characteristics} ></CharacteristicTable>
                 </div>
             )
         }
@@ -44,5 +42,5 @@ const RosterUnitContainer = ({ warbandRoster }: { warbandRoster: IUnit[] }) => {
         <div>{unitDivs}</div>
     );
 };
-function mapStateToProps(state: ISelectionState) { ({ warbandRoster: state.warbandRoster }) };
+const mapStateToProps = (state: ISelectionState) => { ({ warbandRoster: state.warbandRoster }); return {} };
 export const UnitContainer = connect(mapStateToProps)(RosterUnitContainer);

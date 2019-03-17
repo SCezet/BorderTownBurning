@@ -7,11 +7,15 @@ export const SET_UNIT = 'SET_UNIT';
 export const RESTRICT_ALIGNMENTS = 'RESTRICT_ALIGNMENTS';
 export const RESTRICT_OBJECTIVES = 'RESTRICT_OBJECTIVES';
 export const RESTRICT_UNITS = 'RESTRICT_UNITS';
+export const ADD_UNIT_TO_UNITLIST = 'ADD_UNIT_TO_UNITLIST';
 export const REMOVE_UNIT_FROM_UNITLIST = 'REMOVE_UNIT_FROM_UNITLIST';
 export const ADD_MONEY_TO_TREASURY = 'ADD_MONEY_TO_TREASURY';
-export const SUBSTRACT_MONEY_FROM_TREASURY = 'SUBSTRACT_MONEY_FROM_TREASURY';
+export const RESET_TREASURY = 'RESET_TREASURY';
+export const SUBTRACT_MONEY_FROM_TREASURY = 'SUBTRACT_MONEY_FROM_TREASURY';
 export const ADD_UNIT_TO_ROSTER = 'ADD_UNIT_TO_ROSTER';
 export const REMOVE_UNIT_FROM_ROSTER = 'REMOVE_UNIT_FROM_ROSTER';
+export const ADD_WARBAND_RATING = 'ADD_WARBAND_RATING';
+export const SUBTRACT_WARBAND_RATING = 'SUBTRACT_WARBAND_RATING';
 
 class SetArmy {
     readonly type = SET_ARMY
@@ -39,14 +43,18 @@ class RestrictUnits {
 }
 class SetUnit {
     readonly type = SET_UNIT
-    constructor(public payload: IUnit) { }
+    constructor(public payload: IUnit | null) { }
 }
 class AddMoneyToTreasury {
     readonly type = ADD_MONEY_TO_TREASURY
     constructor(public payload: number) { }
 }
-class SubstractMoneyFromTreasury {
-    readonly type = SUBSTRACT_MONEY_FROM_TREASURY
+class ResetTreasury {
+    readonly type = RESET_TREASURY
+    constructor(public payload: number) { }
+}
+class SubtractMoneyFromTreasury {
+    readonly type = SUBTRACT_MONEY_FROM_TREASURY
     constructor(public payload: number) { }
 }
 class AddUnitToRoster {
@@ -63,6 +71,22 @@ class RemoveUnitFromUnitList {
     constructor(public payload: string) { }
 }
 
+class AddUnitToUnitList {
+    readonly type = ADD_UNIT_TO_UNITLIST
+    constructor(public payload: IUnit) { }
+}
+
+class AddWarbandRating {
+    readonly type = ADD_WARBAND_RATING
+    constructor(public payload: IUnit) { }
+}
+class SubtractWarbandRating {
+    readonly type = SUBTRACT_WARBAND_RATING
+    constructor(public payload: IUnit) { }
+}
+
+
 export type StateActions = SetArmy | SetAlignment | SetObjective | RestrictAlignment |
-    RestrictObjectives | RestrictUnits | SetUnit | SubstractMoneyFromTreasury | AddMoneyToTreasury |
-    RemoveUnitFromRoster | AddUnitToRoster | RemoveUnitFromUnitList;
+    RestrictObjectives | RestrictUnits | SetUnit | SubtractMoneyFromTreasury | AddMoneyToTreasury |
+    RemoveUnitFromRoster | AddUnitToRoster | RemoveUnitFromUnitList | AddWarbandRating | ResetTreasury |
+    AddUnitToUnitList | SubtractWarbandRating;

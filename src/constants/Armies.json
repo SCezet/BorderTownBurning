@@ -293,7 +293,7 @@
             "allowedEquipment": [
                 {
                     "name": "BeastBaseEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Dagger",
                             "cost": 2
@@ -323,7 +323,7 @@
                 },
                 {
                     "name": "UngorEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Spear",
                             "cost": 5
@@ -333,7 +333,7 @@
                 },
                 {
                     "name": "BeastmenEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Halberd",
                             "cost": 15
@@ -513,7 +513,7 @@
                         0,
                         2
                     ],
-                    "experience": 0,
+                    "experience": 8,
                     "equipment": [
                         "Dagger"
                     ]
@@ -552,7 +552,7 @@
                         0,
                         100
                     ],
-                    "experience": 0,
+                    "experience": 8,
                     "equipment": [
                         "Dagger"
                     ]
@@ -678,7 +678,7 @@
             "allowedEquipment": [
                 {
                     "name": "DwarvenWarriorEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Dagger",
                             "cost": 2
@@ -729,7 +729,7 @@
                 },
                 {
                     "name": "DwarvenArmourEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Light Armour",
                             "cost": 20
@@ -755,7 +755,7 @@
                 },
                 {
                     "name": "DwarvenRangerEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Dagger",
                             "cost": 2
@@ -1038,7 +1038,7 @@
             "allowedEquipment": [
                 {
                     "name": "SigmarEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Dagger",
                             "cost": 2
@@ -1084,7 +1084,7 @@
                 },
                 {
                     "name": "SigmarArmour",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Light Armour",
                             "cost": 20
@@ -1110,7 +1110,7 @@
                 },
                 {
                     "name": "SigmarHeroEquipment",
-                    "equipmentList": [
+                    "equipment": [
                         {
                             "name": "Holy Tome",
                             "cost": 120

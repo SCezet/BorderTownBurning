@@ -22,5 +22,5 @@ const AlDropdown = ({ listOfAlignments }: { listOfAlignments: string[] }) => {
     );
 }
 
-function mapStateToProps(state: ISelectionState) { ({ listOfAlignments: state.listOfAlignments }) };
+function mapStateToProps(state: ISelectionState) { ({ listOfAlignments: state.listOfAlignments }); return {} };
 export const AlignmentDropdown = connect(mapStateToProps)(AlDropdown);

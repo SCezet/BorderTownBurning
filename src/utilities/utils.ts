@@ -1,4 +1,5 @@
-import { IArmy, IUnit } from "../constants";
+import { IArmy, IUnit, Equipment } from "../constants";
+import { store } from "..";
 
 
 const ArmyList: IArmy[] = require("../constants/Armies.json").armies;
@@ -14,6 +15,18 @@ export function getRestrictedAlignmentList(selectedArmy: string): string[] {
     } else {
         return [];
     }
+}
+
+
+export function getEquipment(equipmentListName: string): Equipment[] {
+    const Army = ArmyList.find((army) => army.name === store.getState().selectedArmy);
+    if (Army !== undefined) {
+        const equipmentList = Army.allowedEquipment.find(equipmentList => equipmentList.name === equipmentListName)
+        if (equipmentList) {
+            return equipmentList.equipment;
+        }
+    }
+    return [];
 }
 
 export function getArmyTreasury(selectedArmy: string): number {
@@ -44,6 +57,15 @@ export function getArmySizeLimit(selectedArmy: string): number {
 }
 
 export function getUnits(selectedArmy: string): IUnit[] {
+    const Army = ArmyList.find((army) => army.name === selectedArmy);
+    if (Army !== undefined) {
+        return Army.units;
+    } else {
+        return [];
+    }
+}
+
+export function getUnit(selectedArmy: string): IUnit[] {
     const Army = ArmyList.find((army) => army.name === selectedArmy);
     if (Army !== undefined) {
         return Army.units;

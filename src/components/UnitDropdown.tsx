@@ -27,5 +27,5 @@ const UnitsDropdown = ({ listOfUnits }: { listOfUnits: IUnit[] }) => {
         </div>
     );
 };
-function mapStateToProps(state: ISelectionState) { ({ listOfUnits: state.listOfUnits }) };
+function mapStateToProps(state: ISelectionState) { ({ listOfUnits: state.listOfUnits }); return {} };
 export const UnitDropdown = connect(mapStateToProps)(UnitsDropdown);

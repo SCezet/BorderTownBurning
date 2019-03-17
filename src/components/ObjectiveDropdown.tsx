@@ -3,7 +3,8 @@ import React from "react";
 import { connect } from "react-redux";
 import "rc-select/assets/index.css";
 import { store } from "..";
-import { SET_OBJECTIVE, ISelectionState } from "../constants";
+import { ISelectionState } from "../constants";
+import { SET_OBJECTIVE } from "../actions";
 
 const ODropdown = ({ listOfObjectives }: { listOfObjectives: string[] }) => {
     const dropDownList = listOfObjectives.map((entry) => <Option key={entry} value={entry}>{entry}</Option>);
@@ -20,5 +21,5 @@ const ODropdown = ({ listOfObjectives }: { listOfObjectives: string[] }) => {
         </div>
     );
 };
-function mapStateToProps(state: ISelectionState) { ({ listOfObjectives: state.listOfObjectives }) };
+function mapStateToProps(state: ISelectionState) { ({ listOfObjectives: state.listOfObjectives }); return {} };
 export const ObjectiveDropdown = connect(mapStateToProps)(ODropdown);
